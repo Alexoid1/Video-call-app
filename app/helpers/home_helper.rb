@@ -17,4 +17,11 @@ module HomeHelper
         current_user.online? ? "home/partials/nav/dropdown/gofflinebtn" :
         "home/partials/nav/dropdown/gonlinebtn"
     end
+    def btnStart
+        if user_signed_in?
+        "home/partials/startbtn/scrollbtn"
+        else
+        "home/partials/startbtn/authbtn"
+        end
+    end
 end
