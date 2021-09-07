@@ -67,6 +67,12 @@ body {
             }
         }
     }
+    .header-image {
+        position: absolute;
+        top: 120px;
+        right: 30px;
+        width: 600px;
+    }
         /** =======================DEVELOPERS SECTION ======================== **/
     .developers {
         padding: 20px;
@@ -113,8 +119,9 @@ body {
             }
         }     
     }
+}
     ////////// ================== AUTH FORM ============//////////////
-    .auth-page {
+.auth-page {
         background-image: linear-gradient(to right, #141B5D, #4756A7);
         height: 100vh;
     }
@@ -217,5 +224,14 @@ body {
                 margin-left: 3px;
             }
         }
-    }
 }
+
+
+
+// ========= Bootstrap notification ==========
+.notice, .danger {
+    margin: 0px;
+    p {
+    margin-bottom: 0px;
+    }
+}// ========= Bootstrap notification ==========
