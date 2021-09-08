@@ -9,6 +9,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+gem 'dotenv-rails', groups: [:development, :test]
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -32,7 +33,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'azure-storage', '~> 0.15.0.preview', require: false
 
-gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
