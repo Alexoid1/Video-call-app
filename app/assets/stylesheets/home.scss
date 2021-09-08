@@ -144,13 +144,6 @@ body {
                 overflow: hidden;
                 box-shadow: 1px 1px 15px -5px black;
                 transition: all .3s ease;
-                &:hover{
-                transform: scale(1.05);
-                cursor: pointer;
-                }
-                &:hover .profile-pic{
-                opacity: .5;
-                }
                 .profile-pic {
                     height: 100%;
                     width: 100%;
@@ -169,26 +162,33 @@ body {
                         padding-top: 15px;
                     }
                 }
-                .upload-button {
-                    position: absolute;
-                    top: 0; left: 0;
-                    height: 100%;
-                    width: 100%;
-                    .fa-arrow-circle-up{
-                    position: absolute;
-                    font-size: 100px;
-                    top: 0px;
-                    left: 0px;
-                    text-align: center;
-                    opacity: 0;
-                    transition: all .3s ease;
-                    color: #34495e;
+                
+            }
+            .button-cont{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                transition: all .3s ease;
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
                     }
-                    &:hover .fa-arrow-circle-up{
-                    opacity: .9;
-                    }
+                &:hover .file-upload{
+                    opacity: .5;
+                }
+                .file-upload{
+                    content: "Select File";
+                    width: 175px;
+                    height: 40px;
+                    margin-top: 0;
+                    border: none;
+                    background: transparent;
+                    color: white;
+                    
+                    
                 }
             }
+            
             
             label, em {
                 color: $grayColor;
