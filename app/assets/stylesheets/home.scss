@@ -30,6 +30,15 @@ body {
     background-color: $greenColor;
     border-color: $greenColor;
     }
+    &.state-btn {
+        border-color: $greenColor;
+        color: $greenColor !important;
+        }
+    &.state-btn:hover, &.state-btn.online {
+        background-color: $greenColor;
+        border-color: $greenColor;
+        color: white !important;
+    }
 }
 
 .imgsvg {
@@ -74,51 +83,54 @@ body {
         width: 600px;
     }
         /** =======================DEVELOPERS SECTION ======================== **/
-    .developers {
-        padding: 20px;
-        h2 {
-            font-weight: 300;
-            color: #212CA6;
-        }
-        .dev-card {
-            background-color: #BCDEFA;
-            border-radius: 20px;
-            img {
-                border: 3px solid #EFF8FF;
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-            }
-            .dev-name {
-                padding: 0px 10px;
-                .appearance {
-                    color: red;
-                    font-size: 8px;
-                    &.online {
-                        color: green;
-                    }
-                }
-            }
-            .dev-level {
-                font-weight: 300;
-                color: #2D8F98;
-            }
-            .dev-icons {
-                i {
-                    font-size: 18px;
-                }
-                .github-icon {
-                    color: black;
-                }
-                .camera-icon {
-                    color: $greenColor;
-                    &.offline {
-                        display: none;
-                    }
-                } 
-            }
-        }     
+   
+}
+
+.developers {
+    padding: 20px;
+    h2 {
+        font-weight: 300;
+        color: #212CA6;
     }
+    .dev-card {
+        background-color: #BCDEFA;
+        border-radius: 20px;
+       
+        img {
+            border: 3px solid #EFF8FF;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;           
+        }
+        .dev-name {
+            padding: 0px 10px;
+            .appearance {
+                color: red;
+                font-size: 8px;
+                &.online {
+                    color: green;
+                }
+            }
+        }
+        .dev-level {
+            font-weight: 300;
+            color: #2D8F98;
+        }
+        .dev-icons {
+            i {
+                font-size: 18px;
+            }
+            .github-icon {
+                color: black;
+            }
+            .camera-icon {
+                color: $greenColor;
+                &.offline {
+                    display: none;
+                }
+            } 
+        }
+    }     
 }
     ////////// ================== AUTH FORM ============//////////////
 .auth-page {
