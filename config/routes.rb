@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   post 'online', to: 'home#online'
   post 'offline', to: 'home#offline'
+  resources :users
   root to: 'home#index'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
