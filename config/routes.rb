@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   devise_for :users, controllers: { registrations: "registrations" }
   
   devise_scope :user do
@@ -7,9 +8,12 @@ Rails.application.routes.draw do
   delete 'logout', to: 'devise/sessions#destroy'
   
   end
+  
+  resources :rooms
+  resources :messages
   post 'online', to: 'home#online'
   post 'offline', to: 'home#offline'
-  resources :users
+  
   root to: 'home#index'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

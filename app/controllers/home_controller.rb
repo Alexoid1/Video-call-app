@@ -1,15 +1,21 @@
 class HomeController < ApplicationController
   
   def index
-    @users = User.where.not(id: current_user.id) if user_signed_in?
+    if user_signed_in?
+      @users = User.where.not(id: current_user.id) 
+      redirect_to rooms_path
+    end  
   end
   
+   
+
   def online
     current_user.online!
     broadcast_change_to_users("online")
     respond_to do |format|
     format.js
     end
+    
   end
   def offline
     current_user.offline!
@@ -18,6 +24,8 @@ class HomeController < ApplicationController
     format.js
     end
   end
+
+  
 
   private
 

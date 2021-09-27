@@ -1,0 +1,42 @@
+<%= render 'home/partials/nav' %>
+<div id="room-id" data-room-id="<%= @room.try(:id) %>"></div>
+<div id="user-id" data-user-id="<%= current_user.id %>"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3 rooms-sidebar">
+      <div class="card no-outline">
+          <div class="card-body">
+            <small>Logged in as</small><br>
+            <b><%= current_user.name %><br></b>
+          </div>
+      </div>
+      <hr>
+      <%= render 'form', room: Room.new %>
+      <hr>
+      <% @rooms.each do |room| %>
+        <%= link_to room, class: 'room-link' do %>
+          <% active_class = (@room == room) ? 'active' : '' %>
+          <div class="card no-outline mb-2 room-card <%= active_class %>">
+            <div class="card-body">
+              <span class='name'><%= room.name %></span><br>
+              <span class='member-count'>
+                
+              </span>
+              
+            </div>
+          </div>
+        <% end %>
+        <div>
+                <span><%= room.name %></span>
+                <span><%= link_to 'Show', room %></span>
+                <span><%= link_to 'Edit', edit_room_path(room) %></span>
+                <span><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+              </div>
+      <% end %>
+    </div>
+  </div>  
+</div>
+
+
+
+<%= link_to 'New Room', new_room_path %>
