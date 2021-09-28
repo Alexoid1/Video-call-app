@@ -3,10 +3,30 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .message {
+    margin-top: 10px;
+    min-width: 59px;
     .content-container{
+        display: inline-block;
+        .content{
+            padding: 8px 11px;
+            border-radius: 20px;
+            background-color: #eeeeee;
+        }
         .author{
             color: gray;
             font-size: small;
+        }
+    }
+    &.me {
+        display: flex;
+        justify-content: right;
+        .content-container{
+            .content{
+                background-color: #007BFF;
+                color: white;
+                padding: 8px 11px;
+                border-radius: 20px;
+            }
         }
     }
 }
