@@ -24,11 +24,9 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.user=current_user
     
-      if @message.save
-        redirect_to request.referrer
-      
-     
-      end
+    @message.save
+    SendMessageJob.perform_later(@message)
+    
    
   end
 

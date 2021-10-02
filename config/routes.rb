@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   
   resources :rooms
   resources :messages
+  
   post 'online', to: 'home#online'
   post 'offline', to: 'home#offline'
   

@@ -1,21 +1,29 @@
 // Place all the styles related to the Rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.chatt {
-   
-   .chat-room {
-       height: 80vh;
-       #messages {
-           height: 450px;
-           overflow-y: scroll;
-           border-bottom: 1px solid rgb(145, 141, 141);
-             
+.fullScreen {
+    height: 88vh;
+    
+    .chatt {
+        
+       
+       .chat-room {
+           
+           #messages {
+               height: 430px;
+               overflow-y: scroll;
+               border-bottom: 1px solid rgb(145, 141, 141);
+                 
+           }
+    
+           .chat-box {
+            position: absolute;
+            bottom: 0;
+            width: 95%;
+            background-color: white;
+            min-height: 60px;
+            border: 1px solid black ;
+           }
        }
-
-       .chat-box {
-        position: absolute;
-        bottom: 0;
-        width: 90%;
-       }
-   }
+    }
 }
